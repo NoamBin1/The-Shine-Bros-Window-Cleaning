@@ -349,7 +349,6 @@ const IMGS = {
 <div id="intro-overlay" style="position:fixed;inset:0;z-index:10000;background:#000;display:flex;align-items:center;justify-content:center;transition:opacity 1.2s ease">
   <video id="intro-vid" autoplay muted playsinline style="width:100%;height:100%;object-fit:cover"
     onerror="skipIntro()" onended="fadeIntro()">
-    <source src="intro.mp4" type="video/mp4">
     <source src="https://d8j0ntlcm91z4.cloudfront.net/user_3JYVuFccljLSf2X17PmIw0zHRLY/hf_20261002_012641_71e42738-5238-48e6-ad77-3040cefd1c35.mp4" type="video/mp4">
   </video>
   <button onclick="skipIntro()" style="position:absolute;bottom:32px;right:32px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.35);color:#fff;font-size:.8rem;font-family:inherit;padding:8px 18px;border-radius:4px;cursor:pointer;letter-spacing:.06em">Skip ›</button>
@@ -469,6 +468,40 @@ function contactSec(id){return`<section class="sec bdr-t" style="background:var(
 </div></section>`}
 
 function faqHtml(items){return items.map(f=>`<div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)">${f.q}${chevDown()}</button><div class="faq-ans">${f.a}</div></div>`).join('')}
+
+function findUsSec(){return`
+<section class="sec bdr-t" style="background:var(--n950);text-align:center">
+  <p class="lbl">Follow Along</p>
+  <h2 class="sec-title" style="margin-top:8px">Find Us Online</h2>
+  <p style="color:var(--w60);max-width:480px;margin:12px auto 40px;font-size:.9375rem">See our work, read reviews, and connect with us on your favourite platform.</p>
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:16px">
+    <a href="https://www.instagram.com/theshinebroswindowcleaning" target="_blank" rel="noopener"
+       style="display:flex;align-items:center;gap:12px;background:var(--n800);border:1px solid var(--b12);border-radius:10px;padding:16px 24px;text-decoration:none;color:var(--w100);font-weight:600;font-size:.9375rem;min-width:180px;transition:border-color .2s,background .2s"
+       onmouseover="this.style.borderColor='#E1306C';this.style.background='rgba(225,48,108,0.1)'" onmouseout="this.style.borderColor='var(--b12)';this.style.background='var(--n800)'">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#E1306C" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="#E1306C" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="#E1306C"/></svg>
+      Instagram
+    </a>
+    <a href="https://www.facebook.com/share/1JYqP6fHGZ/" target="_blank" rel="noopener"
+       style="display:flex;align-items:center;gap:12px;background:var(--n800);border:1px solid var(--b12);border-radius:10px;padding:16px 24px;text-decoration:none;color:var(--w100);font-weight:600;font-size:.9375rem;min-width:180px;transition:border-color .2s,background .2s"
+       onmouseover="this.style.borderColor='#1877F2';this.style.background='rgba(24,119,242,0.1)'" onmouseout="this.style.borderColor='var(--b12)';this.style.background='var(--n800)'">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="4" stroke="#1877F2" stroke-width="2"/><path d="M13 21v-8h2.5l.5-3H13V8.5C13 7.7 13.4 7 14.5 7H16V4.5S15 4 13.5 4C11.1 4 10 5.5 10 7.5V10H8v3h2v8h3z" fill="#1877F2"/></svg>
+      Facebook
+    </a>
+    <a href="https://nextdoor.com/page/the-shine-bros-window-cleaning-llc" target="_blank" rel="noopener"
+       style="display:flex;align-items:center;gap:12px;background:var(--n800);border:1px solid var(--b12);border-radius:10px;padding:16px 24px;text-decoration:none;color:var(--w100);font-weight:600;font-size:.9375rem;min-width:180px;transition:border-color .2s,background .2s"
+       onmouseover="this.style.borderColor='#00B246';this.style.background='rgba(0,178,70,0.1)'" onmouseout="this.style.borderColor='var(--b12)';this.style.background='var(--n800)'">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3C7.03 3 3 7.03 3 12s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9z" stroke="#00B246" stroke-width="2"/><path d="M8 13c0-2.2 1.8-4 4-4s4 1.8 4 4v4H8v-4z" fill="#00B246"/></svg>
+      Nextdoor
+    </a>
+    <a href="https://www.yelp.com/biz/the-shine-bros-window-cleaning-charlotte" target="_blank" rel="noopener"
+       style="display:flex;align-items:center;gap:12px;background:var(--n800);border:1px solid var(--b12);border-radius:10px;padding:16px 24px;text-decoration:none;color:var(--w100);font-weight:600;font-size:.9375rem;min-width:180px;transition:border-color .2s,background .2s"
+       onmouseover="this.style.borderColor='#FF1A1A';this.style.background='rgba(255,26,26,0.1)'" onmouseout="this.style.borderColor='var(--b12)';this.style.background='var(--n800)'">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" stroke="#FF1A1A" stroke-width="2"/><text x="8" y="16" font-size="10" font-weight="700" fill="#FF1A1A" font-family="serif">y!</text></svg>
+      Yelp
+    </a>
+  </div>
+</section>`;
+}
 
 function footer(){return`<footer>
   <div class="footer-top" style="grid-template-columns:2fr 1fr 1fr 1fr">
@@ -693,6 +726,7 @@ function pagHome(){
     </div>
   </section>
 
+  ${findUsSec()}
   ${contactSec('hf')}
 
   ${footer()}`;
